@@ -1,8 +1,10 @@
 package com.g3code.jukebox.models;
 
+import java.util.List;
+
 public class Setting {
-    private String id;
-    private String[] requires;
+    public String id;
+    public List<String> requires;
 
     public String getId() {
         return id;
@@ -12,11 +14,11 @@ public class Setting {
         this.id = id;
     }
 
-    public String[] getRequires() {
+    public List<String> getRequires() {
         return requires;
     }
 
-    public void setRequires(String[] requires) {
+    public void setRequires(List<String> requires) {
         this.requires = requires;
     }
 }

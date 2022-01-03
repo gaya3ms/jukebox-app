@@ -1,7 +1,14 @@
 package com.g3code.jukebox.models;
 
-public class Component {
-    private String name;
+public class NameComponent {
+    public String name;
+
+    public NameComponent(String name) {
+        this.name = name;
+    }
+
+    public NameComponent() {
+    }
 
     public String getName() {
         return name;

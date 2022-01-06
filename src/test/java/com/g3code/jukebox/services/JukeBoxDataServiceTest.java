@@ -14,6 +14,6 @@ class JukeBoxDataServiceTest {
 
     @Test
     void getJukeBoxesFromExternalAPI() {
-        jukeBoxDataService.getJukeBoxesFromExternalAPI();
+       
     }
 }

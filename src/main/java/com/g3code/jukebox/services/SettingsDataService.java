@@ -27,6 +27,9 @@ public class SettingsDataService {
 
     public List<String> getComponentsForSettingByID(String id){
         HashMap<String, List<String>> settings_map = getSettingsMap();
+        if(settings_map.get(id) == null){
+            throw new SettingIdNotFound("The setting id: " + id + "is not found. Try another");
+        }
         List<String> components = settings_map.get(id);
         return components;
     }

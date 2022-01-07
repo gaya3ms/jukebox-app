@@ -26,7 +26,7 @@ public class JukeboxSearchService {
 
     public List<Jukebox> performSearch(String setting_id, String model_name, Integer offset, Integer limit){
         List<Jukebox> jukeboxes = performSearchBySettingID(setting_id);
-        if(jukeboxes.size() == 0){
+        if(jukeboxes.isEmpty()){
            throw new SettingIdNotFound("No matching jukebox found with setting ID: " + setting_id +". Try another one");
         }
         if ( model_name != null && model_name.trim().length() > 0 ) {

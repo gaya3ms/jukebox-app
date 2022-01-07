@@ -7,6 +7,7 @@ public class Jukebox {
     private String id;
     private List<NameComponent> components;
     private String model;
+    @JsonIgnore
     private List<String> componentList = new ArrayList<>();
 
     public Jukebox() {}

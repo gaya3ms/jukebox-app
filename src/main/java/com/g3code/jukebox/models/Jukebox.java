@@ -6,8 +6,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Jukebox {
     private String id;
-    private List<NameComponent> components;
     private String model;
+    private List<NameComponent> components;
     @JsonIgnore
     private List<String> componentList = new ArrayList<>();
 
@@ -37,7 +37,7 @@ public class Jukebox {
 
     public void setComponents(List<NameComponent> components) {
         this.components = components;
-        this.componentList.clear(); //TODO  - Refactor to utilize jackson's inherent conversion.
+        this.componentList.clear(); 
         this.components.forEach(jbox->this.componentList.add(jbox.getName()));
     }
 
